@@ -4,9 +4,10 @@ from pathlib import Path
 import random
 import time
 from functools import wraps
+import os
 
 print = Console().print
-_wordlist = Path("words5-from-OSPD4")
+_wordlist = Path(f'{os.path.dirname(__file__)}/{Path("words5-from-OSPD4")}')
 # _words = _wordlist.read_text().split("\n")
 _words = _wordlist.read_text().splitlines()
 _startingWords = ['salet', 'crate', 'crane', 'slate', 'adieu', 'least', 'start']
